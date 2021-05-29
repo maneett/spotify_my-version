@@ -1,0 +1,12 @@
+@keyframes leftInNav {
+  0% {
+    opacity: 0;
+    transform: translateX(100rem);
+    filter: blur(2);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+    filter: blur(1);
+  }
+}

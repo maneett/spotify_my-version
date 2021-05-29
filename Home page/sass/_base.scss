@@ -1,0 +1,24 @@
+:root {
+  --color-primary: #1d8954;
+  --color-black: #191414;
+  --default-font-size: 1.8rem;
+  --color-hover: #27b95f;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  @media only screen and (max-width: 62.5em) {
+    font-size: 50%;
+  }
+}

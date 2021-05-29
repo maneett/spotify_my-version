@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-family: sans-serif;
+  height: 90vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/wesley-tingey-4q_1c0rd1A0-unsplash.jpg);
+  background-size: cover;
+  background-position: top;
+
+  &__text-box {
+    margin-left: 3rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    @media only screen and (max-width: 41em) {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 1rem;
+    }
+  }
+  @media only screen and (max-width: 41em) {
+    font-size: 40%;
+  }
+}

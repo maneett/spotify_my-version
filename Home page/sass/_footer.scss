@@ -1,0 +1,107 @@
+.footer {
+  height: 100%;
+  background-color: var(--color-black);
+}
+.container {
+  display: grid;
+  padding: 4rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+
+  @media only screen and (max-width: 46em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}
+.logo {
+  &-container {
+  }
+  &-pic {
+    transform: translateY(-2rem);
+    height: 4rem;
+    width: auto;
+  }
+}
+.sec-links {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  align-items: start;
+  li {
+    text-align: left;
+    font-size: 1.4rem;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+  &-heading {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.6rem;
+    color: rgb(168, 162, 162);
+    text-align: left;
+  }
+  &-list {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-column: 2/ 5;
+    @media only screen and (max-width: 46em) {
+      font-size: 2.2rem;
+      grid-column: 1 / 2;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, 1fr);
+      margin-bottom: 2rem;
+      grid-gap: 4rem;
+    }
+  }
+}
+
+.social-icons {
+  font-size: 2.5rem;
+  color: #fff;
+  &-list {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    @media only screen and (max-width: 46em) {
+      justify-content: start;
+    }
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 5rem;
+    width: 5rem;
+    background-color: rgb(46, 44, 44);
+    border-radius: 100%;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    a,
+    &:visited,
+    &:active {
+      color: #fff;
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
+  }
+}
